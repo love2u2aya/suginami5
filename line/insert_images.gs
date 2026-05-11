@@ -9,6 +9,25 @@
  * 5. Googleアカウントの権限を許可する
  */
 
+// body の直接子要素を返す（テキスト要素から上に辿る）
+function getDirectBodyChild(body, element) {
+  let current = element;
+  while (current !== null && current !== undefined) {
+    try {
+      const parent = current.getParent();
+      if (parent === null || parent === undefined) return null;
+      // 親が BODY_SECTION（文書本体）なら current が直接子
+      if (parent.getType() === DocumentApp.ElementType.BODY_SECTION) {
+        return current;
+      }
+      current = parent;
+    } catch (e) {
+      return null;
+    }
+  }
+  return null;
+}
+
 function insertExplanationImages() {
   const DOC_ID = '1IZRGt_CxGIRdgMG8WUST7tWdajJA8EH13DORjsm-hj8';
 
@@ -76,12 +95,13 @@ function insertExplanationImages() {
   for (const item of IMAGE_MAP) {
     const searchResult = body.findText(item.keyword);
     if (searchResult) {
-      let element = searchResult.getElement();
-      // body の直接子要素（段落）まで遡る
-      while (element.getParent() && element.getParent() !== body) {
-        element = element.getParent();
+      // body の直接子要素まで遡る（型チェックを使用して確実に判定）
+      const directChild = getDirectBodyChild(body, searchResult.getElement());
+      if (directChild === null) {
+        Logger.log('✗ スキップ（body直下の要素が見つかりません）: ' + item.label);
+        continue;
       }
-      const index = body.getChildIndex(element);
+      const index = body.getChildIndex(directChild);
       insertions.push({ index, fileId: item.fileId, label: item.label });
       Logger.log('✓ 見つかりました: ' + item.label + ' (段落インデックス: ' + index + ')');
     } else {
