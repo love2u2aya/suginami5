@@ -1,0 +1,70 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1040 520" width="1040" height="520">
+  <defs>
+    <linearGradient id="bg2" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0D3B2E"/>
+      <stop offset="60%" stop-color="#1B5E3B"/>
+      <stop offset="100%" stop-color="#2D7A52"/>
+    </linearGradient>
+    <filter id="glow">
+      <feGaussianBlur stdDeviation="3" result="blur"/>
+      <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+  </defs>
+
+  <!-- Background -->
+  <rect width="1040" height="520" fill="url(#bg2)"/>
+
+  <!-- Star field (decorative dots) -->
+  <circle cx="200" cy="80" r="2" fill="white" fill-opacity="0.4"/>
+  <circle cx="350" cy="50" r="1.5" fill="white" fill-opacity="0.3"/>
+  <circle cx="500" cy="90" r="2.5" fill="white" fill-opacity="0.5"/>
+  <circle cx="650" cy="40" r="1.5" fill="white" fill-opacity="0.35"/>
+  <circle cx="800" cy="70" r="2" fill="white" fill-opacity="0.4"/>
+  <circle cx="950" cy="55" r="1.5" fill="white" fill-opacity="0.3"/>
+  <circle cx="120" cy="150" r="1.5" fill="white" fill-opacity="0.25"/>
+  <circle cx="920" cy="160" r="2" fill="white" fill-opacity="0.3"/>
+  <circle cx="750" cy="110" r="1" fill="white" fill-opacity="0.5"/>
+  <circle cx="420" cy="130" r="1.5" fill="white" fill-opacity="0.35"/>
+
+  <!-- Large decorative circle -->
+  <circle cx="850" cy="260" r="230" fill="#74C69D" fill-opacity="0.06"/>
+  <circle cx="850" cy="260" r="180" fill="#74C69D" fill-opacity="0.05"/>
+
+  <!-- Campfire icon (right side) -->
+  <g transform="translate(780, 120)">
+    <!-- Logs -->
+    <ellipse cx="120" cy="240" rx="90" ry="18" fill="#5C4033" fill-opacity="0.7"/>
+    <rect x="40" y="200" width="25" height="55" rx="8" transform="rotate(-20,52,227)" fill="#6D4C41" fill-opacity="0.7"/>
+    <rect x="55" y="200" width="25" height="55" rx="8" transform="rotate(20,67,227)" fill="#795548" fill-opacity="0.7"/>
+    <!-- Flames -->
+    <path d="M90,200 C75,160 110,130 100,90 C120,120 140,150 125,200 Z" fill="#FF6F00" fill-opacity="0.85"/>
+    <path d="M105,200 C90,165 125,135 115,95 C135,125 150,160 140,200 Z" fill="#FF8F00" fill-opacity="0.75"/>
+    <path d="M80,200 C70,170 95,145 88,110 C105,135 115,165 105,200 Z" fill="#FFA000" fill-opacity="0.8"/>
+    <path d="M95,200 C85,175 105,155 100,130 C112,150 118,172 110,200 Z" fill="#FFCA28" fill-opacity="0.9"/>
+    <!-- Glow -->
+    <ellipse cx="107" cy="200" rx="35" ry="15" fill="#FF6F00" fill-opacity="0.25"/>
+  </g>
+
+  <!-- Bottom ground line -->
+  <rect x="0" y="458" width="1040" height="62" fill="#0D3B2E" fill-opacity="0.7"/>
+  <rect x="0" y="458" width="1040" height="2" fill="#74C69D" fill-opacity="0.4"/>
+
+  <!-- Left vertical accent -->
+  <rect x="0" y="0" width="6" height="520" fill="#52B788"/>
+
+  <!-- Event badge -->
+  <rect x="80" y="72" width="200" height="40" rx="8" fill="#52B788" fill-opacity="0.3" stroke="#52B788" stroke-width="1.5"/>
+  <text x="180" y="98" font-family="'Hiragino Sans', 'Noto Sans JP', 'Yu Gothic', sans-serif" font-size="17" font-weight="700" fill="#B7E4C7" text-anchor="middle" letter-spacing="2">🏕️ イベント情報</text>
+
+  <!-- Main heading -->
+  <text x="80" y="200" font-family="'Hiragino Sans', 'Noto Sans JP', 'Yu Gothic', sans-serif" font-size="62" font-weight="900" fill="white" letter-spacing="-1">活動のお知らせ</text>
+
+  <!-- Detail line -->
+  <text x="80" y="258" font-family="'Hiragino Sans', 'Noto Sans JP', 'Yu Gothic', sans-serif" font-size="26" font-weight="400" fill="#74C69D" letter-spacing="1">📅 日時・場所などは本文をご確認ください</text>
+
+  <!-- Accent line -->
+  <rect x="80" y="280" width="350" height="3" rx="1.5" fill="#52B788" fill-opacity="0.7"/>
+
+  <!-- Bottom text -->
+  <text x="80" y="498" font-family="'Hiragino Sans', 'Noto Sans JP', 'Yu Gothic', sans-serif" font-size="20" font-weight="600" fill="#74C69D" letter-spacing="2">ボーイスカウト杉並5団</text>
+</svg>

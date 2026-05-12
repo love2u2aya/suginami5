@@ -1,0 +1,101 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1040 520" width="1040" height="520">
+  <defs>
+    <linearGradient id="sky" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#0A1628"/>
+      <stop offset="60%" stop-color="#1A2F52"/>
+      <stop offset="100%" stop-color="#243B6E"/>
+    </linearGradient>
+    <linearGradient id="ground" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#1B4332"/>
+      <stop offset="100%" stop-color="#0D2B1E"/>
+    </linearGradient>
+    <radialGradient id="moon" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#FFF9E6"/>
+      <stop offset="100%" stop-color="#FFE082"/>
+    </radialGradient>
+    <radialGradient id="fire" cx="50%" cy="80%" r="60%">
+      <stop offset="0%" stop-color="#FF6F00"/>
+      <stop offset="100%" stop-color="#E65100" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+
+  <!-- Night sky background -->
+  <rect width="1040" height="520" fill="url(#sky)"/>
+
+  <!-- Stars -->
+  <circle cx="80" cy="40" r="1.8" fill="white" fill-opacity="0.9"/>
+  <circle cx="180" cy="80" r="1.2" fill="white" fill-opacity="0.7"/>
+  <circle cx="280" cy="30" r="2" fill="white" fill-opacity="0.8"/>
+  <circle cx="380" cy="60" r="1.5" fill="white" fill-opacity="0.6"/>
+  <circle cx="460" cy="25" r="1.8" fill="white" fill-opacity="0.9"/>
+  <circle cx="550" cy="50" r="1.2" fill="white" fill-opacity="0.7"/>
+  <circle cx="650" cy="35" r="2.2" fill="white" fill-opacity="0.85"/>
+  <circle cx="730" cy="70" r="1.5" fill="white" fill-opacity="0.65"/>
+  <circle cx="820" cy="30" r="1.8" fill="white" fill-opacity="0.8"/>
+  <circle cx="920" cy="55" r="1.2" fill="white" fill-opacity="0.7"/>
+  <circle cx="990" cy="80" r="1.8" fill="white" fill-opacity="0.6"/>
+  <circle cx="130" cy="115" r="1.2" fill="white" fill-opacity="0.5"/>
+  <circle cx="330" cy="100" r="1.5" fill="white" fill-opacity="0.6"/>
+  <circle cx="600" cy="90" r="1" fill="white" fill-opacity="0.7"/>
+  <circle cx="860" cy="110" r="1.3" fill="white" fill-opacity="0.5"/>
+  <!-- Twinkle stars -->
+  <path d="M220,55 L222,50 L224,55 L229,57 L224,59 L222,64 L220,59 L215,57 Z" fill="white" fill-opacity="0.8"/>
+  <path d="M700,45 L702,40 L704,45 L709,47 L704,49 L702,54 L700,49 L695,47 Z" fill="white" fill-opacity="0.7"/>
+  <path d="M500,30 L501.5,26 L503,30 L507,31.5 L503,33 L501.5,37 L500,33 L496,31.5 Z" fill="white" fill-opacity="0.9"/>
+
+  <!-- Moon -->
+  <circle cx="900" cy="100" r="60" fill="url(#moon)" fill-opacity="0.15"/>
+  <circle cx="900" cy="100" r="45" fill="url(#moon)" fill-opacity="0.8"/>
+  <!-- Moon crescent shadow -->
+  <circle cx="918" cy="95" r="38" fill="#1A2F52" fill-opacity="0.7"/>
+
+  <!-- Mountain silhouette -->
+  <polygon points="0,380 150,180 300,380" fill="#0D2B1E"/>
+  <polygon points="200,380 380,150 560,380" fill="#122518"/>
+  <polygon points="450,380 620,200 790,380" fill="#0D2B1E"/>
+  <polygon points="650,380 820,220 990,380" fill="#122518"/>
+  <polygon points="850,380 1040,250 1040,380" fill="#0D2B1E"/>
+
+  <!-- Ground -->
+  <rect x="0" y="375" width="1040" height="145" fill="url(#ground)"/>
+
+  <!-- Tent -->
+  <g transform="translate(400, 280)">
+    <!-- Tent body -->
+    <polygon points="100,0 200,130 0,130" fill="#1B5E20" stroke="#2D7A52" stroke-width="2"/>
+    <polygon points="100,0 80,130 120,130" fill="#155724" fill-opacity="0.8"/>
+    <!-- Tent entrance -->
+    <ellipse cx="100" cy="130" rx="25" ry="15" fill="#0D3B15"/>
+    <!-- Tent line -->
+    <line x1="0" y1="130" x2="-40" y2="155" stroke="#B7E4C7" stroke-width="1.5" stroke-opacity="0.5"/>
+    <line x1="200" y1="130" x2="240" y2="155" stroke="#B7E4C7" stroke-width="1.5" stroke-opacity="0.5"/>
+    <circle cx="-40" cy="157" r="3" fill="#B7E4C7" fill-opacity="0.5"/>
+    <circle cx="240" cy="157" r="3" fill="#B7E4C7" fill-opacity="0.5"/>
+  </g>
+
+  <!-- Campfire glow -->
+  <ellipse cx="600" cy="445" rx="80" ry="30" fill="#FF6F00" fill-opacity="0.2"/>
+  <ellipse cx="600" cy="445" rx="50" ry="18" fill="#FF6F00" fill-opacity="0.15"/>
+  <!-- Fire flames -->
+  <path d="M575,445 C568,420 585,405 580,385 C592,405 600,420 595,445 Z" fill="#FF6F00" fill-opacity="0.9"/>
+  <path d="M590,445 C583,422 598,408 594,390 C606,410 612,425 608,445 Z" fill="#FF8F00" fill-opacity="0.85"/>
+  <path d="M580,445 C575,428 587,416 584,400 C594,415 598,430 594,445 Z" fill="#FFCA28" fill-opacity="0.95"/>
+  <!-- Fire logs -->
+  <ellipse cx="600" cy="448" rx="40" ry="8" fill="#4E342E"/>
+  <rect x="565" y="440" width="70" height="10" rx="5" fill="#5D4037" fill-opacity="0.8"/>
+
+  <!-- Title area -->
+  <rect x="0" y="0" width="380" height="280" fill="#0A1628" fill-opacity="0.4"/>
+
+  <!-- Badge -->
+  <rect x="40" y="45" width="200" height="38" rx="19" fill="#1B5E20" fill-opacity="0.8" stroke="#52B788" stroke-width="1.5" stroke-opacity="0.6"/>
+  <text x="140" y="70" font-family="'Hiragino Sans', 'Noto Sans JP', 'Yu Gothic', sans-serif" font-size="17" font-weight="700" fill="#B7E4C7" text-anchor="middle" letter-spacing="2">🏕️ サマーキャンプ</text>
+
+  <!-- Title -->
+  <text x="40" y="160" font-family="'Hiragino Sans', 'Noto Sans JP', 'Yu Gothic', sans-serif" font-size="58" font-weight="900" fill="white">野外キャンプ</text>
+  <text x="40" y="215" font-family="'Hiragino Sans', 'Noto Sans JP', 'Yu Gothic', sans-serif" font-size="24" font-weight="400" fill="#74C69D">夏の思い出をつくろう！</text>
+
+  <!-- Bottom -->
+  <rect x="0" y="460" width="1040" height="60" fill="#0A1628" fill-opacity="0.7"/>
+  <text x="40" y="498" font-family="'Hiragino Sans', 'Noto Sans JP', 'Yu Gothic', sans-serif" font-size="20" font-weight="600" fill="#74C69D" letter-spacing="2">ボーイスカウト杉並5団</text>
+</svg>

@@ -1,0 +1,67 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1040 520" width="1040" height="520">
+  <defs>
+    <linearGradient id="bg4" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#F5F9F6"/>
+      <stop offset="100%" stop-color="#E8F5EE"/>
+    </linearGradient>
+    <linearGradient id="sidebar" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#1B4332"/>
+      <stop offset="100%" stop-color="#2D6A4F"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Light background -->
+  <rect width="1040" height="520" fill="url(#bg4)"/>
+
+  <!-- Green sidebar -->
+  <rect x="0" y="0" width="340" height="520" fill="url(#sidebar)"/>
+
+  <!-- Sidebar decorations -->
+  <circle cx="170" cy="100" r="180" fill="white" fill-opacity="0.04"/>
+  <circle cx="170" cy="420" r="140" fill="white" fill-opacity="0.04"/>
+
+  <!-- Sidebar accent line -->
+  <rect x="340" y="0" width="6" height="520" fill="#52B788"/>
+
+  <!-- Leaf decoration (sidebar) -->
+  <g transform="translate(80, 220)">
+    <ellipse cx="90" cy="80" rx="70" ry="40" fill="#52B788" fill-opacity="0.2" transform="rotate(-30,90,80)"/>
+    <ellipse cx="90" cy="80" rx="55" ry="30" fill="#74C69D" fill-opacity="0.15" transform="rotate(20,90,80)"/>
+    <ellipse cx="90" cy="80" rx="40" ry="20" fill="#B7E4C7" fill-opacity="0.1" transform="rotate(-50,90,80)"/>
+  </g>
+
+  <!-- Sidebar org name (vertical) -->
+  <text transform="rotate(-90,170,260)" x="-90" y="175" font-family="'Hiragino Sans', 'Noto Sans JP', 'Yu Gothic', sans-serif" font-size="15" font-weight="600" fill="#B7E4C7" letter-spacing="3" text-anchor="middle">ボーイスカウト杉並5団</text>
+
+  <!-- Sidebar icon (bell) -->
+  <g transform="translate(115, 60)">
+    <path d="M55,30 C55,15 70,5 85,5 C100,5 115,15 115,30 L115,80 C115,90 120,100 130,105 L40,105 C50,100 55,90 55,80 Z" fill="none" stroke="#74C69D" stroke-width="3" stroke-opacity="0.7"/>
+    <rect x="75" y="105" width="20" height="10" rx="5" fill="#74C69D" fill-opacity="0.7"/>
+    <circle cx="85" cy="5" r="6" fill="#74C69D" fill-opacity="0.5"/>
+  </g>
+
+  <!-- Sidebar label -->
+  <text x="170" y="175" font-family="'Hiragino Sans', 'Noto Sans JP', 'Yu Gothic', sans-serif" font-size="20" font-weight="700" fill="white" text-anchor="middle" letter-spacing="2">お 知 ら せ</text>
+
+  <!-- Right content area -->
+  <!-- Tag -->
+  <rect x="400" y="70" width="170" height="34" rx="17" fill="#2D6A4F" fill-opacity="0.12" stroke="#2D6A4F" stroke-width="1.5" stroke-opacity="0.4"/>
+  <text x="485" y="93" font-family="'Hiragino Sans', 'Noto Sans JP', 'Yu Gothic', sans-serif" font-size="15" font-weight="600" fill="#2D6A4F" text-anchor="middle" letter-spacing="2">公式お知らせ</text>
+
+  <!-- Main title -->
+  <text x="400" y="195" font-family="'Hiragino Sans', 'Noto Sans JP', 'Yu Gothic', sans-serif" font-size="54" font-weight="900" fill="#1B4332" letter-spacing="-1">重要なお知らせ</text>
+
+  <!-- Subtitle -->
+  <text x="400" y="252" font-family="'Hiragino Sans', 'Noto Sans JP', 'Yu Gothic', sans-serif" font-size="22" font-weight="400" fill="#2D6A4F" fill-opacity="0.75">詳細は本文をご確認ください</text>
+
+  <!-- Divider -->
+  <rect x="400" y="275" width="560" height="2" rx="1" fill="#2D6A4F" fill-opacity="0.2"/>
+
+  <!-- Bottom info row -->
+  <text x="400" y="370" font-family="'Hiragino Sans', 'Noto Sans JP', 'Yu Gothic', sans-serif" font-size="48" fill="#2D6A4F" fill-opacity="0.07" font-weight="900" letter-spacing="-2">NOTICE</text>
+
+  <!-- Date placeholder -->
+  <rect x="400" y="390" width="280" height="55" rx="10" fill="#2D6A4F" fill-opacity="0.08" stroke="#2D6A4F" stroke-width="1" stroke-opacity="0.2"/>
+  <text x="415" y="413" font-family="'Hiragino Sans', 'Noto Sans JP', 'Yu Gothic', sans-serif" font-size="13" fill="#2D6A4F" fill-opacity="0.6" letter-spacing="1">日時</text>
+  <text x="415" y="435" font-family="'Hiragino Sans', 'Noto Sans JP', 'Yu Gothic', sans-serif" font-size="16" font-weight="700" fill="#1B4332">○月○日（○）○○:○○〜</text>
+</svg>

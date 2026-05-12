@@ -1,0 +1,74 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1040 520" width="1040" height="520">
+  <defs>
+    <linearGradient id="bg3" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#155724"/>
+      <stop offset="50%" stop-color="#1E7A3A"/>
+      <stop offset="100%" stop-color="#27A34F"/>
+    </linearGradient>
+    <linearGradient id="card" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="white" stop-opacity="0.15"/>
+      <stop offset="100%" stop-color="white" stop-opacity="0.05"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Background -->
+  <rect width="1040" height="520" fill="url(#bg3)"/>
+
+  <!-- Wave decoration top -->
+  <path d="M0,0 Q260,60 520,20 Q780,-20 1040,40 L1040,0 Z" fill="white" fill-opacity="0.05"/>
+
+  <!-- Wave decoration bottom -->
+  <path d="M0,520 Q260,460 520,490 Q780,520 1040,470 L1040,520 Z" fill="#0D3B1E" fill-opacity="0.5"/>
+
+  <!-- Decorative large circle -->
+  <circle cx="850" cy="260" r="280" fill="white" fill-opacity="0.04"/>
+  <circle cx="850" cy="260" r="200" fill="white" fill-opacity="0.03"/>
+
+  <!-- Sun/compass icon (right) -->
+  <g transform="translate(820, 140)">
+    <circle cx="90" cy="90" r="65" fill="#F9A825" fill-opacity="0.15" stroke="#F9A825" stroke-width="2" stroke-opacity="0.4"/>
+    <circle cx="90" cy="90" r="45" fill="#F9A825" fill-opacity="0.12"/>
+    <!-- Compass rays -->
+    <line x1="90" y1="15" x2="90" y2="45" stroke="#F9A825" stroke-width="3" stroke-opacity="0.6" stroke-linecap="round"/>
+    <line x1="90" y1="135" x2="90" y2="165" stroke="#F9A825" stroke-width="3" stroke-opacity="0.6" stroke-linecap="round"/>
+    <line x1="15" y1="90" x2="45" y2="90" stroke="#F9A825" stroke-width="3" stroke-opacity="0.6" stroke-linecap="round"/>
+    <line x1="135" y1="90" x2="165" y2="90" stroke="#F9A825" stroke-width="3" stroke-opacity="0.6" stroke-linecap="round"/>
+    <line x1="33" y1="33" x2="54" y2="54" stroke="#F9A825" stroke-width="2" stroke-opacity="0.4" stroke-linecap="round"/>
+    <line x1="126" y1="54" x2="147" y2="33" stroke="#F9A825" stroke-width="2" stroke-opacity="0.4" stroke-linecap="round"/>
+    <line x1="33" y1="147" x2="54" y2="126" stroke="#F9A825" stroke-width="2" stroke-opacity="0.4" stroke-linecap="round"/>
+    <line x1="126" y1="126" x2="147" y2="147" stroke="#F9A825" stroke-width="2" stroke-opacity="0.4" stroke-linecap="round"/>
+    <!-- Center -->
+    <circle cx="90" cy="90" r="12" fill="#F9A825" fill-opacity="0.7"/>
+    <polygon points="90,60 97,85 90,80 83,85" fill="white" fill-opacity="0.9"/>
+    <polygon points="90,120 97,95 90,100 83,95" fill="#F9A825" fill-opacity="0.5"/>
+  </g>
+
+  <!-- Left accent bar -->
+  <rect x="0" y="0" width="8" height="520" fill="#52B788"/>
+
+  <!-- Highlighted badge -->
+  <rect x="80" y="70" width="240" height="44" rx="22" fill="#27AE60" fill-opacity="0.4" stroke="white" stroke-width="1.5" stroke-opacity="0.6"/>
+  <text x="200" y="98" font-family="'Hiragino Sans', 'Noto Sans JP', 'Yu Gothic', sans-serif" font-size="17" font-weight="700" fill="white" text-anchor="middle" letter-spacing="3">✨ 体験・見学 大歓迎</text>
+
+  <!-- Main title -->
+  <text x="80" y="200" font-family="'Hiragino Sans', 'Noto Sans JP', 'Yu Gothic', sans-serif" font-size="60" font-weight="900" fill="white" letter-spacing="-1">体験会のご案内</text>
+
+  <!-- Subtitle -->
+  <text x="80" y="258" font-family="'Hiragino Sans', 'Noto Sans JP', 'Yu Gothic', sans-serif" font-size="24" font-weight="400" fill="#B7E4C7" letter-spacing="1">はじめての方も、ぜひ気軽にどうぞ！</text>
+
+  <!-- Info cards -->
+  <rect x="80" y="295" width="200" height="80" rx="12" fill="url(#card)" stroke="white" stroke-width="1" stroke-opacity="0.3"/>
+  <text x="180" y="330" font-family="'Hiragino Sans', 'Noto Sans JP', 'Yu Gothic', sans-serif" font-size="13" fill="#B7E4C7" text-anchor="middle" letter-spacing="1">対象</text>
+  <text x="180" y="355" font-family="'Hiragino Sans', 'Noto Sans JP', 'Yu Gothic', sans-serif" font-size="18" font-weight="700" fill="white" text-anchor="middle">年長〜小学5年生</text>
+
+  <rect x="300" y="295" width="200" height="80" rx="12" fill="url(#card)" stroke="white" stroke-width="1" stroke-opacity="0.3"/>
+  <text x="400" y="330" font-family="'Hiragino Sans', 'Noto Sans JP', 'Yu Gothic', sans-serif" font-size="13" fill="#B7E4C7" text-anchor="middle" letter-spacing="1">参加費</text>
+  <text x="400" y="355" font-family="'Hiragino Sans', 'Noto Sans JP', 'Yu Gothic', sans-serif" font-size="18" font-weight="700" fill="white" text-anchor="middle">無 料</text>
+
+  <rect x="520" y="295" width="200" height="80" rx="12" fill="url(#card)" stroke="white" stroke-width="1" stroke-opacity="0.3"/>
+  <text x="620" y="330" font-family="'Hiragino Sans', 'Noto Sans JP', 'Yu Gothic', sans-serif" font-size="13" fill="#B7E4C7" text-anchor="middle" letter-spacing="1">持ち物</text>
+  <text x="620" y="355" font-family="'Hiragino Sans', 'Noto Sans JP', 'Yu Gothic', sans-serif" font-size="18" font-weight="700" fill="white" text-anchor="middle">手ぶらでOK！</text>
+
+  <!-- Bottom -->
+  <text x="80" y="498" font-family="'Hiragino Sans', 'Noto Sans JP', 'Yu Gothic', sans-serif" font-size="20" font-weight="600" fill="#B7E4C7" letter-spacing="2">ボーイスカウト杉並5団</text>
+</svg>

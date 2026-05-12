@@ -1,0 +1,73 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1040 520" width="1040" height="520">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#1B4332"/>
+      <stop offset="100%" stop-color="#2D6A4F"/>
+    </linearGradient>
+    <linearGradient id="accent" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#74C69D" stop-opacity="0.9"/>
+      <stop offset="100%" stop-color="#52B788" stop-opacity="0.6"/>
+    </linearGradient>
+    <filter id="shadow">
+      <feDropShadow dx="0" dy="4" stdDeviation="8" flood-color="#000" flood-opacity="0.3"/>
+    </filter>
+  </defs>
+
+  <!-- Background -->
+  <rect width="1040" height="520" fill="url(#bg)"/>
+
+  <!-- Decorative circles (background texture) -->
+  <circle cx="900" cy="80" r="200" fill="#74C69D" fill-opacity="0.08"/>
+  <circle cx="950" cy="420" r="150" fill="#74C69D" fill-opacity="0.06"/>
+  <circle cx="100" cy="450" r="120" fill="#74C69D" fill-opacity="0.05"/>
+
+  <!-- Left accent bar -->
+  <rect x="0" y="0" width="8" height="520" fill="url(#accent)"/>
+
+  <!-- Top accent line -->
+  <rect x="80" y="60" width="180" height="3" rx="2" fill="#74C69D" fill-opacity="0.8"/>
+
+  <!-- Tree icon (simplified scout/nature icon) -->
+  <g transform="translate(840, 100)">
+    <!-- Tree trunk -->
+    <rect x="22" y="130" width="16" height="50" rx="4" fill="#74C69D" fill-opacity="0.7"/>
+    <!-- Tree layers -->
+    <polygon points="30,0 70,80 0,80" fill="#52B788" fill-opacity="0.8"/>
+    <polygon points="30,30 75,110 -15,110" fill="#40916C" fill-opacity="0.7"/>
+    <polygon points="30,60 80,145 -20,145" fill="#2D6A4F" fill-opacity="0.6"/>
+  </g>
+
+  <!-- Small decorative trees -->
+  <g transform="translate(760, 340) scale(0.45)">
+    <rect x="22" y="130" width="16" height="50" rx="3" fill="#74C69D" fill-opacity="0.5"/>
+    <polygon points="30,0 70,80 0,80" fill="#52B788" fill-opacity="0.5"/>
+    <polygon points="30,30 75,110 -15,110" fill="#40916C" fill-opacity="0.4"/>
+    <polygon points="30,60 80,145 -20,145" fill="#2D6A4F" fill-opacity="0.35"/>
+  </g>
+  <g transform="translate(820, 355) scale(0.35)">
+    <rect x="22" y="130" width="16" height="50" rx="3" fill="#74C69D" fill-opacity="0.4"/>
+    <polygon points="30,0 70,80 0,80" fill="#52B788" fill-opacity="0.4"/>
+    <polygon points="30,30 75,110 -15,110" fill="#40916C" fill-opacity="0.3"/>
+    <polygon points="30,60 80,145 -20,145" fill="#2D6A4F" fill-opacity="0.25"/>
+  </g>
+
+  <!-- Bottom accent band -->
+  <rect x="0" y="460" width="1040" height="60" fill="#1B4332" fill-opacity="0.6"/>
+  <rect x="0" y="460" width="1040" height="2" fill="#74C69D" fill-opacity="0.5"/>
+
+  <!-- Tag label (top) -->
+  <rect x="80" y="75" width="160" height="36" rx="18" fill="#74C69D" fill-opacity="0.25" stroke="#74C69D" stroke-width="1.5" stroke-opacity="0.6"/>
+  <text x="160" y="99" font-family="'Hiragino Sans', 'Noto Sans JP', 'Yu Gothic', sans-serif" font-size="16" font-weight="600" fill="#B7E4C7" text-anchor="middle" letter-spacing="2">活動レポート</text>
+
+  <!-- Main title -->
+  <text x="80" y="195" font-family="'Hiragino Sans', 'Noto Sans JP', 'Yu Gothic', sans-serif" font-size="58" font-weight="800" fill="white" filter="url(#shadow)" letter-spacing="-1">今月の活動報告</text>
+
+  <!-- Subtitle -->
+  <text x="80" y="255" font-family="'Hiragino Sans', 'Noto Sans JP', 'Yu Gothic', sans-serif" font-size="24" font-weight="400" fill="#B7E4C7" letter-spacing="1">子どもたちの成長をお届けします</text>
+
+  <!-- Divider -->
+  <rect x="80" y="280" width="400" height="2" rx="1" fill="url(#accent)" fill-opacity="0.6"/>
+
+  <!-- Org name at bottom -->
+  <text x="80" y="500" font-family="'Hiragino Sans', 'Noto Sans JP', 'Yu Gothic', sans-serif" font-size="20" font-weight="600" fill="#74C69D" letter-spacing="2">ボーイスカウト杉並5団</text>
+</svg>
