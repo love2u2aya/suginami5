@@ -1,0 +1,19 @@
+{
+  "name": "suginami5",
+  "version": "1.0.0",
+  "description": "新規入団者の獲得を目的とした、告知・広報活動の設計ドキュメント集。",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "http://local_proxy@127.0.0.1:45485/git/love2u2aya/suginami5"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "puppeteer": "^24.43.1"
+  }
+}
