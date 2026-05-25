@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>テスト001</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="page-wrapper">
+    <h1 class="page-title">テスト</h1>
+
+    <div class="test-card">
+      <div class="test-card__header">テスト001</div>
+    </div>
+
+    <div class="test-meta">
+      <p class="test-meta__instruction">各設問に回答後、画面下の「採点する」をクリックしてください。</p>
+      <p class="test-meta__passing-score">[合格点：30.0点]</p>
+    </div>
+
+    <form id="quiz-form">
+
+      <!-- 設問1 -->
+      <div class="question">
+        <p class="question__number">1.</p>
+        <h2 class="question__title">単一指標が存在しない理由</h2>
+        <p class="question__body">「3大疾病の1年以内再発率」を単一の公的統計から取り出せないと動画が指摘した最も根本的な理由はどれか。</p>
+        <p class="question__points">[配点：10点]</p>
+        <ul class="choices">
+          <li class="choice">
+            <input type="radio" name="q1" id="q1a" value="a">
+            <label class="choice__label" for="q1a">国がデータを集めていないから</label>
+          </li>
+          <li class="choice">
+            <input type="radio" name="q1" id="q1b" value="b">
+            <label class="choice__label" for="q1b">がん・急性心筋梗塞・脳卒中で別々の登録機関が別の指標で追跡しており横断比較する枠組みが存在しないから</label>
+          </li>
+          <li class="choice">
+            <input type="radio" name="q1" id="q1c" value="c">
+            <label class="choice__label" for="q1c">個人情報保護のため再発データは公開されていないから</label>
+          </li>
+          <li class="choice">
+            <input type="radio" name="q1" id="q1d" value="d">
+            <label class="choice__label" for="q1d">1年という追跡期間が短すぎて統計上意味を持たないから</label>
+          </li>
+        </ul>
+      </div>
+
+      <!-- 設問2 -->
+      <div class="question">
+        <p class="question__number">2.</p>
+        <h2 class="question__title">国立がん研究センターの指標</h2>
+        <p class="question__body">国立がん研究センターの院内がん登録生存率集計が示している指標として動画の説明に合致するものはどれか。</p>
+        <p class="question__points">[配点：10点]</p>
+        <ul class="choices">
+          <li class="choice">
+            <input type="radio" name="q2" id="q2a" value="a">
+            <label class="choice__label" for="q2a">部位別の1年以内再発率</label>
+          </li>
+          <li class="choice">
+            <input type="radio" name="q2" id="q2b" value="b">
+            <label class="choice__label" for="q2b">治療を受けた患者の翌年再診率</label>
+          </li>
+          <li class="choice">
+            <input type="radio" name="q2" id="q2c" value="c">
+            <label class="choice__label" for="q2c">5年相対生存率（治療開始から5年後に生存している割合）</label>
+          </li>
+          <li class="choice">
+            <input type="radio" name="q2" id="q2d" value="d">
+            <label class="choice__label" for="q2d">入院治療後の30日以内死亡率</label>
+          </li>
+        </ul>
+      </div>
+
+      <!-- 設問3 -->
+      <div class="question">
+        <p class="question__number">3.</p>
+        <h2 class="question__title">再発リスクの個人差</h2>
+        <p class="question__body">動画が強調した「再発リスクに個人差が生まれる主な要因」として最も適切なものはどれか。</p>
+        <p class="question__points">[配点：10点]</p>
+        <ul class="choices">
+          <li class="choice">
+            <input type="radio" name="q3" id="q3a" value="a">
+            <label class="choice__label" for="q3a">年齢・性別などの人口統計的属性</label>
+          </li>
+          <li class="choice">
+            <input type="radio" name="q3" id="q3b" value="b">
+            <label class="choice__label" for="q3b">病期（ステージ）・病型・治療選択・生活習慣などの複合的要素</label>
+          </li>
+          <li class="choice">
+            <input type="radio" name="q3" id="q3c" value="c">
+            <label class="choice__label" for="q3c">居住地域の医療水準</label>
+          </li>
+          <li class="choice">
+            <input type="radio" name="q3" id="q3d" value="d">
+            <label class="choice__label" for="q3d">保険の加入状況</label>
+          </li>
+        </ul>
+      </div>
+
+    </form>
+
+    <div class="grade-btn-wrap">
+      <button type="button" class="btn-grade" onclick="gradeQuiz()">採点する</button>
+    </div>
+
+    <div id="result" class="result-banner"></div>
+  </div>
+
+  <script>
+    const answers = { q1: "b", q2: "c", q3: "b" };
+    const points = { q1: 10, q2: 10, q3: 10 };
+    const passingScore = 30;
+
+    function gradeQuiz() {
+      let score = 0;
+      Object.keys(answers).forEach(name => {
+        const selected = document.querySelector(`input[name="${name}"]:checked`);
+        const choices = document.querySelectorAll(`input[name="${name}"]`);
+        choices.forEach(input => {
+          const li = input.closest(".choice");
+          li.classList.remove("choice--correct", "choice--wrong");
+          if (input.value === answers[name]) {
+            li.classList.add("choice--correct");
+          }
+          if (selected && input.value === selected.value && selected.value !== answers[name]) {
+            li.classList.add("choice--wrong");
+          }
+        });
+        if (selected && selected.value === answers[name]) {
+          score += points[name];
+        }
+      });
+
+      const resultEl = document.getElementById("result");
+      if (score >= passingScore) {
+        resultEl.className = "result-banner result-banner--pass";
+        resultEl.textContent = `合格！　得点：${score}点`;
+      } else {
+        resultEl.className = "result-banner result-banner--fail";
+        resultEl.textContent = `不合格　得点：${score}点（合格点：${passingScore}点）`;
+      }
+      resultEl.scrollIntoView({ behavior: "smooth", block: "center" });
+    }
+  </script>
+</body>
+</html>
