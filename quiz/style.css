@@ -1,5 +1,5 @@
 /* =============================================
-   テストページ スタイルシート
+   テスト（QandA）ページ スタイルシート
    ============================================= */
 
 *, *::before, *::after {
@@ -17,130 +17,80 @@ body {
 }
 
 /* =============================================
-   ページ全体のラッパー
+   ユーティリティ
    ============================================= */
 
-.page-wrapper {
-  max-width: 960px;
-  margin: 0 auto;
-  padding: 24px 16px 80px;
-}
+.mt5  { margin-top: 5px; }
+.mt10 { margin-top: 10px; }
 
 /* =============================================
-   ページタイトル
+   設問セクション
    ============================================= */
 
-.page-title {
-  font-size: 18px;
-  font-weight: bold;
-  color: #333;
-  padding-bottom: 12px;
-  border-bottom: 1px solid #ccc;
-  margin-bottom: 24px;
-}
-
-/* =============================================
-   テストカード
-   ============================================= */
-
-.test-card {
-  border: 1px solid #ddd;
-  border-radius: 4px;
-  overflow: hidden;
-  margin-bottom: 24px;
-}
-
-.test-card__header {
-  background-color: #f0f0f0;
-  padding: 14px 20px;
-  font-size: 15px;
-  font-weight: bold;
-  color: #333;
-}
-
-/* =============================================
-   テスト説明エリア
-   ============================================= */
-
-.test-meta {
-  padding: 0 0 16px;
-  border-bottom: 1px solid #ddd;
-  margin-bottom: 32px;
-}
-
-.test-meta__instruction {
-  font-size: 14px;
-  font-weight: bold;
-  color: #333;
-  margin-bottom: 12px;
-}
-
-.test-meta__passing-score {
-  text-align: right;
-  font-size: 13px;
-  font-weight: bold;
-  color: #2a7a5a;
-}
-
-/* =============================================
-   設問
-   ============================================= */
-
-.question {
+.QandA-Question {
+  display: block;
   padding: 24px 0;
   border-bottom: 1px solid #ddd;
 }
 
-.question:last-of-type {
-  border-bottom: none;
+.QandA-Question:first-of-type {
+  border-top: 1px solid #ddd;
 }
 
-.question__number {
+/* 設問番号 */
+.QandA-No {
+  display: block;
   font-size: 13px;
   color: #555;
-  margin-bottom: 6px;
+  margin-bottom: 4px;
 }
 
-.question__title {
+/* 設問タイトル（直下の p） */
+.QandA-Question > p {
   font-size: 15px;
   font-weight: bold;
   color: #333;
-  margin-bottom: 8px;
-}
-
-.question__body {
-  font-size: 13px;
-  color: #555;
   margin-bottom: 6px;
 }
 
-.question__points {
+/* 設問本文エリア */
+.QandA-Question .mt5 p {
+  font-size: 13px;
+  color: #555;
+}
+
+/* 配点 */
+.QandA-point {
+  display: inline-block;
   font-size: 13px;
   font-weight: bold;
   color: #2a7a5a;
-  margin-bottom: 20px;
+  margin-top: 6px;
+  margin-bottom: 18px;
 }
 
 /* =============================================
-   選択肢
+   ラジオボタングループ
    ============================================= */
 
-.choices {
-  list-style: none;
-  display: flex;
-  flex-direction: column;
-  gap: 14px;
+.QandA-radio-group {
   padding-left: 4px;
 }
 
-.choice {
+.testp {
+  display: none; /* 空の p タグを非表示 */
+}
+
+.radio-label {
   display: flex;
   align-items: flex-start;
   gap: 10px;
+  margin-bottom: 14px;
   cursor: pointer;
 }
 
-.choice input[type="radio"] {
+/* カスタムラジオボタン */
+.radio-label .inputcheck {
   appearance: none;
   -webkit-appearance: none;
   width: 18px;
@@ -148,17 +98,17 @@ body {
   min-width: 18px;
   border: 2px solid #999;
   border-radius: 50%;
-  margin-top: 1px;
+  margin-top: 2px;
   cursor: pointer;
   position: relative;
   transition: border-color 0.15s;
 }
 
-.choice input[type="radio"]:checked {
+.radio-label .inputcheck:checked {
   border-color: #2a7a5a;
 }
 
-.choice input[type="radio"]:checked::after {
+.radio-label .inputcheck:checked::after {
   content: "";
   display: block;
   width: 8px;
@@ -171,11 +121,11 @@ body {
   transform: translate(-50%, -50%);
 }
 
-.choice input[type="radio"]:hover {
+.radio-label .inputcheck:hover {
   border-color: #2a7a5a;
 }
 
-.choice__label {
+.radio-label label {
   font-size: 14px;
   color: #333;
   cursor: pointer;
@@ -183,68 +133,57 @@ body {
 }
 
 /* =============================================
-   採点ボタン
+   ボタンエリア
    ============================================= */
 
-.grade-btn-wrap {
+/* ボタンラッパー（インラインスタイルで flex 指定済みだが念のため） */
+form > div:last-of-type {
+  margin-top: 36px;
   display: flex;
-  justify-content: center;
-  margin-top: 40px;
+  gap: 10px;
+  align-items: center;
 }
 
-.btn-grade {
+/* 戻るボタン */
+.QandA-back {
+  background-color: #fff;
+  color: #555;
+  border: 1px solid #bbb;
+  border-radius: 4px;
+  padding: 10px 28px;
+  font-size: 14px;
+  cursor: pointer;
+  transition: background-color 0.15s, border-color 0.15s;
+}
+
+.QandA-back:hover {
+  background-color: #f5f5f5;
+  border-color: #999;
+}
+
+/* 採点するボタン */
+.QandA-submit {
   background-color: #2a7a5a;
   color: #fff;
   border: none;
   border-radius: 4px;
-  padding: 12px 48px;
-  font-size: 15px;
+  padding: 10px 36px;
+  font-size: 14px;
   font-weight: bold;
   cursor: pointer;
   transition: background-color 0.15s;
 }
 
-.btn-grade:hover {
+.QandA-submit:hover {
   background-color: #1f5e44;
 }
 
-.btn-grade:active {
+.QandA-submit:active {
   background-color: #174d38;
 }
 
-/* =============================================
-   採点結果
-   ============================================= */
-
-.result-banner {
-  display: none;
-  border-radius: 4px;
-  padding: 16px 20px;
-  margin-top: 24px;
-  font-size: 15px;
-  font-weight: bold;
-  text-align: center;
-}
-
-.result-banner--pass {
-  display: block;
-  background-color: #e8f5ee;
-  color: #1f6842;
-  border: 1px solid #a8d5b8;
-}
-
-.result-banner--fail {
-  display: block;
-  background-color: #fdf0f0;
-  color: #a03030;
-  border: 1px solid #f0b8b8;
-}
-
-.choice--correct .choice__label {
-  color: #1f6842;
-  font-weight: bold;
-}
-
-.choice--wrong .choice__label {
-  color: #a03030;
+/* 二重送信防止クラス */
+.QandA-submit.js-submit-disabled:disabled {
+  background-color: #aaa;
+  cursor: not-allowed;
 }
